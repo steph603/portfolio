@@ -1,0 +1,296 @@
+// Star design and fade in / fade out animation 
+// Each star has a different position and different animation speed
+
+.ball {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    background-color: #ccdbdc88;
+    box-shadow: 0px 0px 30px 4px #ffffff80,
+                0px 0px 30px 5px #CCDBDC33,
+                0px 0px 30px 2px #CCDBDC80,
+                0px 0px 30px 3px #CCDBDC80;
+  }
+  
+  .glow {
+    position: absolute;
+    background-color: #CCDBDC;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 5px #CCDBDC33,
+                0px 0px 30px 5px #CCDBDC80,
+                0px 0px 30px 7px #CCDBDC33;
+    animation: fadeInOut 3s infinite;
+  }
+  
+  @keyframes fadeInOut {
+      0% {
+      opacity:0;
+    }
+    50% {
+      opacity: 1
+    }
+    100% {
+      opacity:0;
+    }
+  }
+ 
+// Stars on the desktop... Only display 17
+
+@media screen and (min-width: 760px) { 
+
+    .triangle-1 {
+        .star:nth-child(n+18) {
+            display: none;
+        }
+    }
+    
+    .star:nth-child(1) {
+        left: 10%;
+        top: 14%;
+        .glow {
+            animation: fadeInOut 4s infinite;
+        }
+    }
+
+    .star:nth-child(2) {
+        left: 32%;
+        top: 3%;
+        .glow {
+            animation: fadeInOut 5s infinite;
+        }
+    }
+
+    .star:nth-child(3) {
+        left: 42%;
+        top: 12%;
+        .glow {
+            animation: fadeInOut 4s infinite;
+        }
+    }
+    .star:nth-child(4) {
+        left: 52%;
+        top: 20%;
+        .glow {
+            animation: fadeInOut 6s infinite;
+            }
+        }
+    .star:nth-child(5) {
+        left: 22%;
+        top: 32%;
+        .glow {
+            animation: fadeInOut 5s infinite;
+            }
+        }
+
+    .star:nth-child(6) {
+        left: 47%;
+        top: 37%;
+        .glow {
+            animation: fadeInOut 7s infinite;
+            }
+        }
+
+
+    .star:nth-child(7) {
+        left: 65%;
+        top: 30%;
+        .glow {
+            animation: fadeInOut 7s infinite;
+            }
+        }
+
+    .star:nth-child(8) {
+        left: 80%;
+        top: 10%;
+        .glow {
+            animation: fadeInOut 7s infinite;
+            }
+        }
+
+    .star:nth-child(9) {
+        left: 70%;
+        top: 50%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+
+    .star:nth-child(10) {
+        left: 24%;
+        top: 55%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(11) {
+        left: 22%;
+        top: 45%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(12) {
+        left: 65%;
+        top: 67%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(13) {
+        left: 30%;
+        top: 79%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(14) {
+        left: 77%;
+        top: 84%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(15) {
+        left: 27%;
+        top: 90%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(16) {
+        left: 40%;
+        top: 64%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+    .star:nth-child(17) {
+        left: 47%;
+        top: 72%;
+        .glow {
+        animation: fadeInOut 3s infinite;
+        }
+        }
+}
+
+
+// On mobile, only display 7 stars in first triangle
+
+@media screen and (max-width: 760px) {
+    .triangle-1 {
+    .star:nth-child(n+8) {
+        display: none;
+    }
+}
+
+    .star:nth-child(1) {
+        right: 33px;
+        top: 80px;
+        .glow {
+            animation: fadeInOut 3s infinite;
+        }
+    }
+    .star:nth-child(2) {
+        right: 64px;
+        top: 130px;
+        .glow {
+            animation: fadeInOut 4s infinite;
+        }
+    }
+
+    .star:nth-child(3) {
+        right: 24px;
+        top: 160px;
+        .glow {
+            animation: fadeInOut 2s infinite;
+        }
+    }
+
+    .star:nth-child(4) {
+        right: 64px;
+        top: 400px;
+        .glow {
+            animation: fadeInOut 5s infinite;
+        }
+    }
+
+    .star:nth-child(5) {
+        right: 220px;
+        top: 380px;
+        .glow {
+            animation: fadeInOut 3s infinite;
+        }
+    }
+
+    .star:nth-child(6) {
+        right: 300px;
+        top: 410px;
+        .glow {
+            animation: fadeInOut 5s infinite;
+        }
+    }
+
+    .star:nth-child(7) {
+        right: 120px;
+        top: 340px;
+        .glow {
+            animation: fadeInOut 2s infinite;
+        }
+    }
+
+// Second triangle only has 7 stars to display
+
+    .triangle-2 {
+
+        .star:nth-child(1) {
+            right: 70px;
+            top: -390px;
+            .glow {
+                animation: fadeInOut 2s infinite;
+            }
+        }
+        .star:nth-child(2) {
+            right: 30px;
+            top: -320px;
+            .glow {
+                animation: fadeInOut 4s infinite;
+            }
+        }
+        .star:nth-child(3) {
+            right: 130px;
+            top: -280px;
+            .glow {
+                animation: fadeInOut 3s infinite;
+            }
+        }
+        .star:nth-child(4) {
+            right: 270px;
+            top: -370px;
+            .glow {
+                animation: fadeInOut 3s infinite;
+            }
+        }
+        .star:nth-child(5) {
+            right: 65px;
+            top: -200px;
+            .glow {
+                animation: fadeInOut 2s infinite;
+            }
+        }
+        .star:nth-child(6) {
+            right: 30px;
+            top: -120px;
+            .glow {
+                animation: fadeInOut 6s infinite;
+            }
+        }
+        .star:nth-child(7) {
+            right: 185px;
+            top: -360px;
+            .glow {
+                animation: fadeInOut 3s infinite;
+            }
+        }
+    }
+
+}

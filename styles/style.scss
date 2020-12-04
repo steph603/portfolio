@@ -1,0 +1,77 @@
+@use "themes.scss" as theme;
+@use "fonts.scss";
+@use "projects.scss";
+@use "contact.scss";
+@use "toggle.scss";
+@use "breakpoints.scss";
+@use "blog.scss";
+@use "stars.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,200&family=Nunito:ital,wght@0,400;0,700;0,800;1,400&family=Rubik:wght@700;800&display=swap');
+
+// Setting z-index variables for ease of use
+
+$bground: -100;
+$mground: 2;
+$fground: 100;
+$element: 120;
+$front: 300;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper{
+    z-index: $bground;
+    height: 100vh;
+}
+
+.header {
+    position: absolute;
+    z-index: $fground;
+}
+
+.triangle {
+    position: absolute;
+    z-index: $mground;
+    pointer-events: none;
+}
+
+.floating-menu {
+    z-index: $front;
+}
+
+#indexheader {
+    position: relative;
+    z-index: $fground;
+}
+
+.resume {
+    z-index: $fground;
+}
+
+.sun {
+    position: absolute;
+    z-index: $element;
+}
+.moon {
+    position: absolute;
+    z-index: $element;
+}
+
+.star {
+    position: absolute;
+    z-index: $front;
+}
+
+// *** Don't touch these - these are linked to the HTML class that determines themes ***
+.theme-dark {
+    @include theme.dark;
+}
+.theme-light {
+    @include theme.light 
+}
+
+

@@ -1,0 +1,175 @@
+// Declare variables for darkmode theme
+
+$dbground: #1d2d44;
+$dbground2: #0D1324;
+$daccent1: #FAA613;
+$daccent2: #b97500;
+$dfont: #EBF2FA;
+
+
+// Declare variables for lightmode theme
+
+$lbground: #EFF7F6;
+$lbground2: #F9DCEB;
+$laccent1: #FCEEF2;
+$laccent2: #f7b0d3;
+$laccent3: #fdeb9c;
+$laccent3o: #fdeb9cc0;
+$laccent4: #8ae0f1;
+$lfont: #1d2d44;
+
+
+// When darkTheme is selected, this mixin will be included (sets the theme)
+
+@mixin dark {
+
+  //  ** The sun image is hidden when dark mode is set **
+  .sun {
+    display: none;
+  }
+  // ** Needed to include media breakpoints as different colour applications to the triangle/rectangle design across colour modes **
+
+  @media screen and (max-width: 760px) {
+    .triangle-1 {
+      border-bottom: 60vh solid $dbground2;
+    }
+
+    .triangle-2 {
+      border-top: 60vh solid $dbground2;
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    .triangle-1{
+    background-color: $dbground2;
+    }
+  }
+
+  body {
+    background-color: $dbground;
+  }
+
+
+h1, h2, h3, p {
+  color: $dfont;
+}
+
+a {
+  color: $daccent1;
+}
+
+nav {
+  a:hover {
+    color: $daccent2;
+    text-shadow: 2px 2px 3px $dbground2;
+  }
+}
+
+  .floating-menu {
+    background-color: $daccent1;   
+  }
+
+  .media-icon {
+    color: $dbground2;
+  }
+
+  .card {
+    .back {
+      background: #ebf2fa11;
+    }
+    box-shadow: 3px 3px 10px 0px $dbground2;
+  }
+
+  .form-wrapper {
+    background-color: $dbground2;
+  }
+
+  .submit {
+    color: $dfont;
+  }
+  .inputs {
+      border-bottom: 1px solid $dfont;
+      color: $dfont;
+      }
+
+}
+
+
+
+
+
+// When lightTheme is selected, this mixin will be included (sets the theme)
+
+@mixin light {
+
+
+  //  ** The moon image is hidden when light mode is set **
+  .moon {
+    display: none;
+  }
+  // ** Needed to include media breakpoints as different colour applications to the triangle/rectangle design across colour modes **
+
+  @media screen and (max-width: 760px) {
+    .triangle-1 {
+      border-bottom: 60vh solid $lbground2;
+    }
+
+    .triangle-2 {
+      border-top: 60vh solid $lbground2;
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    .triangle-1{
+    background-color: $lbground2;
+    }
+  }
+
+  body {
+    background-color: $lbground;
+  }
+
+
+h1, h2, h3, p {
+  color: $lfont;
+}
+
+a {
+  color: $laccent2;
+}
+
+nav {
+  a:hover {
+    color: #f38dc0;
+    text-shadow: 2px 2px 3px rgb(158, 157, 157);
+  }
+}
+
+  .floating-menu {
+    background-color: $laccent3;   
+  }
+
+  .media-icon {
+    color: $laccent2;
+  }
+
+  .card {
+    .back {
+      background: #ebf2fa11;
+    }
+    box-shadow: 3px 3px 10px 0px lightgrey;
+  }
+
+  .form-wrapper {
+    background-color: $laccent4;
+  }
+
+  .inputs {
+        border-bottom: 1px solid $lfont;
+        color: $lfont;
+  }
+
+  .submit {
+    color: $lfont;
+  }
+}

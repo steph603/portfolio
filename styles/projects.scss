@@ -1,0 +1,66 @@
+// /* The flexy container for the cards */
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* the container for each card -establishes card size */
+.container{
+    position: relative;
+    width: 400px;
+    height: 320px;
+    margin: 50px;
+    perspective: 1000px;
+}
+
+/* the card - contains both faces  */
+.card{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transform-style: preserve-3d;
+  transition: 1s ease-out;
+  margin: 3px;
+  img {
+    min-height: 100%;
+    max-width: 100%;
+  }
+}
+
+/* The flip */
+.container {
+    &:hover {
+        .card {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+/* Front of card */
+ .front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Back of card - Displays on hover (transform returns to normal when un-hovered) */
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  transform: rotateY(180deg);
+}
